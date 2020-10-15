@@ -1,19 +1,22 @@
 import React from 'react';
 import HomePage from './component/home-page';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Link} from 'react-router-dom';
 
 
 const HatPage =()=>(
   <div>
+    <Link to= '/'>Click here to see hats</Link>
     <h1>Hats page</h1>
   </div>
 )
  
-const HatPageId =()=>(
+const HatPageId =(props)=>(
  <div>
-   <h3>Hat id is{HatPageId.value}</h3>
+    <button onClick={()=>props.history.push('/')}>Click here to got back to the home stor</button>
+   <h3>Hat id is {props.match.params.hatid}</h3>
  </div>
 )
+
 
 function App(){
   return (

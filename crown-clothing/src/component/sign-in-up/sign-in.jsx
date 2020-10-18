@@ -1,11 +1,12 @@
 import React from 'react';
-import './sign-in.scss';
 
-import FormInput from '../form-input/form-input'
-import CustomButton from '../custom-button/custom-button'
+
+import FormInput from '../form-input/form-input';
+import CustomButton from '../custom-button/custom-button';
 
 import {signInWithGoogle} from '../../component/firebase/firebase.utils.js'; 
 
+import './sign-in.scss';
 
 
 
@@ -48,13 +49,13 @@ class SignIn extends React.Component{
                  handleChange={this.handleChange}
                  required />
                  <CustomButton type='submit'>Sign In </CustomButton>
-                 <CustomButton onClick={signInWithGoogle}>{''} Sign in with Google{''}</CustomButton>
+                 <CustomButton onClick={signInWithGoogle}>Sign in with Google</CustomButton>
              </form>
             </div>
             )
     }  
 }
     
-
+// isGoogleSignIn  for the Sign in with google button style to blue which its already in custom-buttom-style.scss
 
 export default SignIn;

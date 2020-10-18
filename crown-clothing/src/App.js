@@ -3,10 +3,12 @@ import {Switch, Route} from 'react-router-dom';
 
 import './App.css'
 
+import Header from './component/header/hearder-cmponent'
 import HomePage from './component/home-page';
 import ShopPage from './component/shop/shop.component.jsx'
 import SignInAndSignUpPage from './component/sign-in-up/sign-in-up-component';
-import Header from './component/header/hearder-cmponent'
+// import SignIn from './component/sign-in-up/sign-in.jsx'
+
 
 
 

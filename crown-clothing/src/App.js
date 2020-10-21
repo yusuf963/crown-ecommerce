@@ -32,6 +32,7 @@ componentDidMount(){
           ...onSnapshot.data()
         }
       })
+      console.log({currentUser: userAuth})
     });
   }
   

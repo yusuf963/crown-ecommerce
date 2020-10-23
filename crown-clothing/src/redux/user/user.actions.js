@@ -1,4 +1,6 @@
+import{UserActionType} from './user.type'
+
 export const setCurrentUser = user =>({
-    type: 'SET_CURRENT_USER',
+    type: UserActionType.SET_CURRENT_USER,
     playload: user
 });

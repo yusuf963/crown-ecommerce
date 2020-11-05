@@ -9,9 +9,12 @@ import HomePage from './component/home-page';
 import ShopPage from './component/shop/shop.component.jsx';
 import SignInAndSignUpPage from './component/sign-in-up/sign-in-up-component';
 import Header from './component/header/hearder-cmponent';
+import CheckputPage from './component/check-out-page/checkout'
+
 import {auth, createUserProfileDocument} from './component/firebase/firebase.utils';
 import{setCurrentUser} from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors'
+import CheckoutPage from './component/check-out-page/checkout';
 
 
 
@@ -46,6 +49,7 @@ componentDidMount(){
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/shop/hats' component={ShopPage}/> 
+          <Route exact path='/checkout' component={CheckoutPage}/>
           <Route exact path='/signin' render={()=> this.props.currentUser? (<Redirect to ='/'/>): (<SignInAndSignUpPage/>)}/>
         </Switch>
       </div>
